@@ -115,9 +115,56 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Thin border utilities */
+  .border-thin {
+    border-width: 0.5px;
+  }
+  
+  .border-t-thin {
+    border-top-width: 0.5px;
+  }
+  
+  .border-b-thin {
+    border-bottom-width: 0.5px;
+  }
+  
+  .border-l-thin {
+    border-left-width: 0.5px;
+  }
+  
+  .border-r-thin {
+    border-right-width: 0.5px;
+  }
+  
+  /* Remove all focus ring shadows and outlines */
+  *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  *:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Remove focus shadows from all element types */
+  button:focus,
+  button:focus-visible,
+  a:focus,
+  a:focus-visible,
+  input:focus,
+  input:focus-visible,
+  textarea:focus,
+  textarea:focus-visible,
+  select:focus,
+  select:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
   }
 }
